@@ -6,10 +6,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nazmul Kabir</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/20143b37fe.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
-        
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" alt="" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Software Engineer</p>
+                <h1>Hi, I'm <span>Nazmul Kabir</span> <br>from Bangladesh</h1>
+            </div>
+        </div>
     </div>
+
+    <!-----------------about----------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/profile.jpeg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti reprehenderit quasi temporibus quis doloribus a dignissimos minima molestias quisquam sint laboriosam ab error impedit illum maxime incidunt dolores, aliquid facere nemo natus? Non officia beatae alias nisi doloremque, totam magni nam eos dignissimos assumenda saepe eum quod ex molestias voluptatem!</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Web app development</li>
+                            <li><span>Software Engineering</span><br> Building Windows software</li>
+                            <li><span>Problem Solver</span><br>Solving Problem in several online judges</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Manager</span><br>IUBAT IT Society Programming Wing</li>
+                            <li><span>POS Operator</span><br> Shwapno</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2019 - Current</span><br>University of Business Agriculture and Technology</li>
+                            <li><span>2016 - 2017</span><br> Noakhali Govt. College</li>
+                            <li><span>2005 - 2015</span><br>Dagonbhuiyan Academy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------------Services-------------------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quam quas est, repudiandae cupiditate atque sequi odit sapiente quo tenetur corporis neque nemo facere nam praesentium. Deleniti aliquam voluptatibus dignissimos!</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-sharp fa-solid fa-laptop-code"></i>
+                    <h2>Software Develop</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quam quas est, repudiandae cupiditate atque sequi odit sapiente quo tenetur corporis neque nemo facere nam praesentium. Deleniti aliquam voluptatibus dignissimos!</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-laptop"></i>
+                    <h2>Problem Solver</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quam quas est, repudiandae cupiditate atque sequi odit sapiente quo tenetur corporis neque nemo facere nam praesentium. Deleniti aliquam voluptatibus dignissimos!</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        
+    </script>
+
 </body>
 </html>
