@@ -13,13 +13,15 @@
         <div class="container">
             <nav>
                 <img src="images/logo.png" alt="" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#heder">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Software Engineer</p>
@@ -96,26 +98,75 @@
         </div>
     </div>
 
+    <!-- ---------------Portfolio--------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/dictionary.png" alt="">
+                    <div class="layer">
+                        <h3>Online English Dictionary</h3>
+                        <p>This is a online english dictionary which was made by using HTML, CSS, Javascript and Dictionary API</p>
+                        <a href="https://nktushar.github.io/English-Dictionary/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/inventory.png" alt="">
+                    <div class="layer">
+                        <h3>Cafeteria Inventory Management System</h3>
+                        <p>This was made for IUBAT Panaromic Cafeteria as a System Analysis course project. Here I've used C# windows form and Mysql</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/calculator.png" alt="">
+                    <div class="layer">
+                        <h3>eCalculator</h3>
+                        <p>This is a non-functional calculator where I used HTML, CSS and Javascript.</p>
+                        <a href="nktushar.github.io/eCalculator/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/nktushar" class="btn"><i class="fa-brands fa-github"></i> See more</a>
+        </div>
+    </div>
 
 
-    <script>
+    <!-- ------------------Contact------------------ -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>nazmulkabirtushar@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+8801859451615</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/nazmul-kabir"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/nk.tushar.3"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/nk_tushar"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <a href="Nazmul Kabir Resume.pdf" download="" class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form action="" name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Nazmul Kabir</p>
+        </div>
+    </div>
 
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
 
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
 
-        
-    </script>
+  <script src="script.js"></script>
 
 </body>
 </html>
